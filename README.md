@@ -11,7 +11,7 @@ npm install --save @manu_omg/react-native-emoji-selector
 ```
 
 ```
-import EmojiSelector from '@manu_omg/customisable-react-native-emoji-selector'
+import EmojiSelector from '@manu_omg/react-native-emoji-selector'
 ```
 
 ## Demo
