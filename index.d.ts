@@ -1,4 +1,4 @@
-declare module "react-native-emoji-selector" {
+declare module "customisable-react-native-emoji-selector" {
   import * as React from "react";
   import { StyleProp, ViewStyle, TextStyle } from 'react-native';
 
