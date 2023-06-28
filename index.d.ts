@@ -1,15 +1,9 @@
-declare module "react-native-emoji-selector" {
-  import * as React from "react";
-  import { StyleProp, ViewStyle, TextStyle } from 'react-native';
+import * as React from "react";
+import {StyleProp, ViewStyle, TextStyle} from 'react-native';
 
-  /**
-   * Categories
-   * The package itself exports a dictionary of objects, however
-   * to to enforce usage of the exported dictionary the types
-   * just simplifies to an enum. Once compiled it runs the
-   * same because the export is named the same.
-   */
-  export enum Categories {
+export as namespace EmojiSelector;
+
+export enum Categories {
     all = "all",
     history = "history",
     emotion = "emotion",
@@ -21,10 +15,11 @@ declare module "react-native-emoji-selector" {
     objects = "objects",
     symbols = "symbols",
     flag = "flag"
-  }
+}
 
-  export interface EmojiSelectorProps {
+export interface EmojiSelectorProps {
     onEmojiSelected(emoji: string): void;
+
     theme?: string;
     placeholder?: string;
     showTabs?: boolean;
@@ -34,15 +29,13 @@ declare module "react-native-emoji-selector" {
     category?: Categories;
     columns?: number;
     shouldInclude?: (e: any) => boolean;
-
-    searchbarStyle?: StyleProp<TextStyle> | undefined;
-    searchbarContainerStyle?: StyleProp<ViewStyle> | undefined;
+    searchbarStyle?: StyleProp<TextStyle>;
+    searchbarContainerStyle?: StyleProp<ViewStyle>;
     placeholderTextColor?: string;
-    categoryButtonStyle?: StyleProp<ViewStyle> | undefined;
-    categoryTextStyle?: StyleProp<TextStyle> | undefined;
-  }
-
-  const EmojiSelector: React.ComponentType<EmojiSelectorProps>;
-
-  export default EmojiSelector;
+    categoryButtonStyle?: StyleProp<ViewStyle>;
+    categoryTextStyle?: StyleProp<TextStyle>;
 }
+
+declare const EmojiSelector: React.ComponentType<EmojiSelectorProps>;
+
+export default EmojiSelector;
